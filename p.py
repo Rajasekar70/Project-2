@@ -11,7 +11,8 @@ class orangeHRM_page():
 
 
     def Login_page(self):
-
+    
+        # method to login to orangeHRM page
         username = "Admin" 
         password = "admin123"
         self.driver.get("https://opensource-demo.orangehrmlive.com")
@@ -31,7 +32,8 @@ class orangeHRM_page():
         time.sleep(5)
         login_button.click()
         time.sleep(5)
-
+        
+        #method to create employee
         Add_Employee = self.driver.find_element(by=By.XPATH, value='//*[@id="app"]/div[1]/div[1]/header/div[2]/nav/ul/li[3]/a')
         time.sleep(5)
         Add_Employee.click()
@@ -56,12 +58,14 @@ class orangeHRM_page():
         time.sleep(5)
         Employeename3.send_keys(Employeenamel)
         time.sleep(5)
-       
+        
+        #method to create new user name and password
         Create_detail = self.driver.find_element(by=By.XPATH, value='//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[2]/div/label/span')
         time.sleep(5)
         Create_detail.click()
         time.sleep(5)
-
+        
+        #method to add user name and password
         username = "Gokul"
         Password = "Gokul@2022"
         Confirm_Password = "Gokul@2022"
@@ -86,13 +90,14 @@ class orangeHRM_page():
         time.sleep(5)
         Save_button.click()
         time.sleep(5)
-
+        
+        #select admin section
         Admin_section = self.driver.find_element(by=By.XPATH, value='//*[@id="app"]/div[1]/div[1]/aside/nav/div[2]/ul/li[1]/a')
         time.sleep(5)
         Admin_section.click()
         time.sleep(5)
 
-
+        #method to verify user and employee
         username = "Gokul"
         Employeename = "Yash" 
         time.sleep(5)
@@ -111,7 +116,8 @@ class orangeHRM_page():
         time.sleep(5)
         search_button.click()
         time.sleep(5)
-
+        
+        #method to logout to orangeHRM page
         logout1 = self.driver.find_element(by=By.XPATH, value='//*[@id="app"]/div[1]/div[1]/header/div[1]/div[2]/ul/li/span/p')
         time.sleep(5)
         logout1.click()
@@ -121,7 +127,8 @@ class orangeHRM_page():
         time.sleep(5)
         logout.click()
         time.sleep(5)
-
+        
+    #method to login again orangeHRM page with new user name and password
     def login(self):
 
         username = "Gokul" 
@@ -144,7 +151,7 @@ class orangeHRM_page():
         login_button.click()
         time.sleep(5)
     
-
+    #method to close the application
     def close(self):
         self.driver.close()
         time.sleep(5)
